@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+    <title>{{ escape(handler.settings["blog_title"]) }}</title>
+    <link rel="stylesheet" href="{{ static_url("css/bootstrap.min.css") }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ static_url("css/bootstrap-responsive.min.css") }}" type="text/css"/>
+    <script type="text/javascript" src="{{ static_url("js/jquery.js") }}"></script>
+    <script type="text/javascript" src="{{ static_url("js/bootstrap.min.js") }}"></script>
+    {% block head %}{% end %}
+  </head>
+  <body>
+    <header class="pagination-centered">
+      <div class="container">
+	<h1>
+	  <small>hello world!</small>
+	  hello
+	  <small>hello world!</small>
+	</h1>
+	<div class="navbar">
+	  <div class="navbar-inner">
+	    <div class="container">
+	      <a class="btn" href="/auth/login">Login</a>
+	      <ul class="nav">
+		<li class="active"><a href="#1">hello</a></li>
+		<li><a href="#2">hello1</a></li>
+		<li><a href="#3">hello2</a></li>
+	      </ul>
+	    </div>
+	  </div> 
+	</div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="mini-layout fluid">
+	{% block body %}{% end %}
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+	<div class="footer" style="border-top: 1px solid #E5E5E5;"><p>&copy2012 hello</p></div>
+	{% block bottom %}{% end %}
+      </div>
+    </footer>
+  </body>
+</html>

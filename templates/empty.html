@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+    <title>{{ escape(handler.settings["blog_title"]) }}</title>
+    <link rel="stylesheet" href="{{ static_url("css/bootstrap.min.css") }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ static_url("css/bootstrap-responsive.min.css") }}" type="text/css"/>
+    <link rel="alternate" href="/feed" type="application/atom+xml" title="{{ escape(handler.settings["blog_title"]) }}"/>
+    <script type="text/javascript" src="{{ static_url("js/jquery.js") }}"></script>
+    <script type="text/javascript" src="{{ static_url("js/bootstrap.min.js") }}"></script>
+    <script type="text/javascript">
+      
+    </script>
+  </head>
+  <body data-target=".navbar" data-spy="scroll">
+    <div class="container">
+      <header class="pagination-centered">
+	<h1>
+	  <small>hello world!</small>
+	  hello
+	  <small>hello world!</small>
+	</h1>
+	<div class="navbar">
+	  <div class="navbar-inner">
+	    <div class="container">
+	      <div class="modal hide fade" id="myModal" style="display: none;">
+            <div class="modal-header">
+              <button data-dismiss="modal" class="close" type="button">×</button>
+              <h3>Modal Heading</h3>
+            </div>
+            <div class="modal-body">
+              <h4>Text in a modal</h4>
+              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
+
+              <h4>Popover in a modal</h4>
+              <p>This <a data-content="And here's some amazing content. It's very engaging. right?" class="btn popover-test" href="#" data-original-title="A Title">button</a> should trigger a popover on hover.</p>
+
+              <h4>Tooltips in a modal</h4>
+              <p><a class="tooltip-test" href="#" data-original-title="Tooltip">This link</a> and <a class="tooltip-test" href="#" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
+
+              <hr>
+
+              <h4>Overflowing text to show optional scrollbar</h4>
+              <p>We set a fixed <code>max-height</code> on the <code>.modal-body</code>. Watch it overflow with all this extra lorem ipsum text we've included.</p>
+              <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+              <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+              <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            </div>
+            <div class="modal-footer">
+              <a data-dismiss="modal" class="btn" href="#">Close</a>
+              <a class="btn btn-primary" href="#">Save changes</a>
+            </div>
+          </div>
+	    <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">Launch demo modal</a>
+	      <a data-toggle="modal" class="btn" href="#myModal">Login</a>
+	      <ul class="nav">
+		<li class="active"><a href="#1">hello</a></li>
+		<li><a href="#2">hello1</a></li>
+		<li><a href="#3">hello2</a></li>
+	      </ul>
+	     </div>
+	   </div> 
+	</div>
+      </header>
+      <div class="row">
+	<div class="span12">
+	<ul class="thumbnails">
+	  {% for i in range(1,10) %}
+          <li class="span3">
+            <div class="thumbnail">
+              <img alt="" src="http://placehold.it/260x180">
+              <div class="caption">
+		<h5>Thumbnail label</h5>
+		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+		  {% for j in range(1,i) %}
+		  hello world hello helooooo 
+		  {% end %}
+		</p>
+		<p><a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a></p>
+              </div>
+            </div>
+          </li>
+	  {% end %}
+	</ul>
+	</div>
+      </div>
+      <div class="footer" style="border-top: 1px solid #E5E5E5;"><p>&copy2012 hello</p></div>
+    </div>
+  </body>
+</html>

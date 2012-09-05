@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <form action="/auth/login" method="POST" class="form-horizontal">
+      <legend>{{ _("Login") }}</legend>
+      <div class="container-fluid">
+	<div class="row-fluid">
+	  <div class="span8">
+	    <div class="control-group">
+	      <label class="control-label" for="inputEmail">{{ _("Email") }}</label>
+	      <div class="controls">
+		<div class="input-prepend">
+		  <span class="add-on"><i class="icon-envelope"></i></span>
+		  <input id="inputEmail" name="email" type="text" placeholder="Email"></input>
+		</div>	  
+	      </div>
+	    </div>
+	    <div class="control-group">
+	      <label class="control-label" for="inputPassword">{{ _("Password") }}</label>
+	      <div class="controls">
+		<div class="input-prepend">
+		  <span class="add-on"><i class="icon-lock"></i></span>
+		  <input id="inputPassword" name="password" type="password" placeholder="{{ _("Password") }}"></input>	  
+		</div>
+	      </div>
+	    </div>
+	    <div class="control-group">
+	      <div class="controls"> 
+		<button class="btn btn-inverse" type="submit">
+		  <i class="icon-user icon-white"></i>{{ _("Sign in") }}
+		</button>
+	      </div>
+	    </div>
+	    {{ xsrf_form_html() }}
+	  </div>
+	  <div class="span4" style="border-left:1px solid #dddddd">
+	    <div class="control-group">
+	      <div class="controls"> 
+		<label>{{ _("Register") }}</label>
+		<button class="btn" type="submit">
+		  {{ _("Register") }}
+		</button>
+		<label>合作方登录：</label>
+		<a href="/auth/weibo">新浪微博</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+      </div>
+    </form>
+{% end %}
